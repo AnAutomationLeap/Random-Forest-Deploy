@@ -33,7 +33,7 @@ def index():
             B = float(request.form['B'])
             LSTAT = float(request.form['LSTAT'])
 
-            filename = 'boston_linear.pickle'
+            filename = 'boston_randomforest.pickle'
             loaded_model = pickle.load(open(filename, 'rb'))  # loading the model file from the storage
             # predictions using the loaded model file
             prediction = loaded_model.predict([[crim,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT]])
